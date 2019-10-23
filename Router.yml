@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dodocker
-        image: fraudacr.azurecr.io/fraudrouter
+        image: dodockerreg.azurecr.io/dodocker
         resources:
           requests:
             cpu: 100m
