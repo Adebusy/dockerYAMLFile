@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dodocker
+  labels:
+    app: dodocker
+spec:
+  selector:
+    matchLabels:
+      app: dodocker
+  replicas: 3
+  template: 
+    metadata:
+      labels:
+        app: dodocker
+    spec:
+      containers:
+      - name: dodocker
+        image: fraudacr.azurecr.io/fraudrouter
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 8080
+          name: router-port  

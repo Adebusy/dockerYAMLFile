@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dodocker-service
+  labels:
+    app: dodocker
+spec:
+  ports:
+  - port: 80   
+  selector:
+    app: dodocker
+  type: LoadBalancer
